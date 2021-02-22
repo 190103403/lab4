@@ -185,5 +185,5 @@
 
 
    <script src={{asset('site') }}></script>
-</body>
+</body> 
 </html>

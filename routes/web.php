@@ -25,6 +25,10 @@ Route::get('/website', function() {
     return view('website');
 })->name('website');
 
+Route::get('/Assem', function() {
+    return view('Assem');
+})->name('Assem');
+
 
 
 
