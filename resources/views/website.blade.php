@@ -184,6 +184,6 @@
 
 
 
-   <script src="Bonus.js"></script>
+   <script src={{asset('site') }}></script>
 </body>
 </html>
