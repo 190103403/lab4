@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
-use App\Models\Client;
+use App\Models\Post;
 
 
 /*
@@ -33,16 +33,16 @@ Route::get('/Assem', function() {
     return view('Assem');
 })->name('Assem');
 
-Route::get ('client/add', function() {
-    DB::table('clients')->insert([
-        'name' => 'Guldana',
-        'surname' => 'Mustafina',
-        'age' => 19
+Route::get('post/add', function(){
+    DB::table('post')->insert([
+        'title' => 'SDU',
+        'body' => 'Suleyman Demirel University (SDU)'
     ]);
 });
-Route::get('client',function() {
-    $client = Client::find(1);
-    return $client => age;
+
+Route::get('post', function () { 
+    $post = Post::find(1); 
+    return $post;
 });
 
 
