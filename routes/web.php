@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
+use App\Http\Controllers\PostController;
+
 
 
 /*
@@ -38,12 +40,17 @@ Route::get('post/add', function(){
         'title' => 'SDU',
         'body' => 'Suleyman Demirel University (SDU)'
     ]);
+   
+});
+Route::get('post', [PostController::class, 'index']);
+Route::get('post/create',function(){
+    return view('post.create');
 });
 
-Route::get('post', function () { 
-    $post = Post::find(1); 
-    return $post;
-});
+Route::post('post/create',[PostController::class, 'store'])->name('add-post');
+
+
+
 
 
 
