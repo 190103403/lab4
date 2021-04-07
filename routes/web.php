@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 use App\Http\Controllers\PostController;
 
+use App\Http\Controllers\UploadController;
+
+
 
 
 /*
@@ -49,6 +52,10 @@ Route::get('post/create',function(){
 
 Route::post('post/create',[PostController::class, 'store'])->name('add-post');
 Route::get('post/{id}', [PostController::class, 'get_post']);
+
+Route::view('/upload','upload');
+Route::post('upload',[UploadController::class,'index']);
+;
 
 
 
