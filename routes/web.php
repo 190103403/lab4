@@ -55,7 +55,8 @@ Route::get('post/{id}', [PostController::class, 'get_post']);
 
 Route::view('/upload','upload');
 Route::post('upload',[UploadController::class,'index']);
-;
+
+Route::get('mail/send','App\Http\Controllers\MailController@send');
 
 
 
